@@ -9,11 +9,11 @@ const NavBar = () => {
     const { status, data: session } = useSession();
 
     return (
-        <div className="flex bg-slate-200 p-5 space-x-3 items-center">
+        <div className="flex bg-slate-200 p-5 space-x-3 items-center justify-between">
             <Link href="/" className="mr-5 flex-none">
                 <Image src={logo} alt="Logo" height={80} priority/>
             </Link>
-            <Link href="/addtodo" className="flex-1 text-center">Add ToDo</Link>
+            {status === 'authenticated' && <Link href="/addtodo" className="flex-1 text-center">Add ToDo</Link>}
             {status === "loading" && <Loading />}
             {status === "authenticated" && (
                 <div>

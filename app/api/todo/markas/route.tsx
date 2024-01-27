@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import schema from "@/app/api/todo/markasdone/schema";
+import schema from "@/app/api/todo/markas/schema";
 import prisma from "@/prisma/client";
 
 export async function PUT(request: NextRequest) {
@@ -9,7 +9,7 @@ export async function PUT(request: NextRequest) {
     return NextResponse.json(validation.error.errors, { status: 400 });
   const doneToDo = await prisma.toDo.update({
     where: {id: body.id},
-      data: {isDone: true}
+      data: {isDone: body.active}
   });
   return NextResponse.json(doneToDo, { status: 201 });
 }

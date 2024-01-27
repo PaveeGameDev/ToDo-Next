@@ -12,6 +12,10 @@ export default async function Home() {
   return (
       <main className="relative h-screen">
         <DisplayToDos todos={todos}/>
+          <div className="my-16"></div>
+        <hr className=" h-5 mx-auto my-96 mb-96 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700"/>
+          <div className="my-16"></div>
+        <DisplayToDos todos={todos} active={false}/>
       </main>
   );
 }
