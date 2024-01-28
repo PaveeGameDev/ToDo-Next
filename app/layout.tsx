@@ -12,18 +12,18 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-                                     children,
-                                   }: {
+  children,
+}: {
   children: React.ReactNode;
 }) {
   return (
-      <html lang="en" data-theme="winter">
+    <html lang="en" data-theme="winter">
       <body>
-      <AuthProvider>
-          <NavBar/>
-        <main className="p-5">{children}</main>
-      </AuthProvider>
+        <AuthProvider>
+          <NavBar />
+          <main className="p-5">{children}</main>
+        </AuthProvider>
       </body>
-      </html>
+    </html>
   );
 }
