@@ -8,12 +8,5 @@
       <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="PostgreSQL" uuid="e1fd9570-7718-4056-913a-ef1689a6eaa8">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>postgres://default:sHwvqz2t3EgF@ep-quiet-hall-a4rcz8om-pooler.us-east-1.postgres.vercel-storage.com:5432/verceldb</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
   </component>
 </project>
